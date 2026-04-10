@@ -10,7 +10,8 @@ function calcularImc() {
     document.getElementById("resultado-imc").value = imcFormatado;
     if (alturaValor === "" || pesoValor === "") {
         alert("Opa! Você esqueceu de preencher o peso ou a altura.");
-    }
+        return;
+    } 
     if (imcFormatado < 18.5) {
         mensagemCondicao.innerText = "Abaixo do peso";
         mensagemCondicao.style.color = "blue";
