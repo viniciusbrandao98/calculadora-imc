@@ -9,22 +9,27 @@
 <body>
     <main>
         <div class="container">
-            <h1>Índice de Massa Corporal (IMC) Calculadora</h1>
-            <div>
-                <p>sua altura(cm) :</p>
-                <input type="number" class="input" id="altura" value="180" placeholder="Insira sua altura aqui">
+            <div class="form-section">
+                <h1>Índice de Massa Corporal (IMC) Calculadora</h1>
+                <div>
+                    <p>sua altura(cm) :</p>
+                    <input type="number" class="input" id="altura" value="180" placeholder="Insira sua altura aqui">
+                </div>
+                <div>
+                    <p>Seu peso (kg) :</p>
+                    <input type="number" class="input" id="peso" value="82" placeholder="Insina seu peso aqui">
+                </div>
+                <button class="btn" id="btn">Calcular IMC</button>
+                <div>
+                    <p>Seu IMC :</p>
+                    <input disabled type="number" class="input" id="resultado-imc" >
+                </div>
+                <div>
+                    <h2>Condição de peso: <span id="condicao-peso"></span></h2>     
+                </div>
             </div>
-            <div>
-                <p>Seu peso (kg) :</p>
-                <input type="number" class="input" id="peso" value="82" placeholder="Insina seu peso aqui">
-            </div>
-            <button class="btn" id="btn">Calcular IMC</button>
-            <div>
-                <p>Seu IMC :</p>
-                <input disabled type="number" class="input" id="resultado-imc" >
-            </div>
-            <div>
-                <h2>Condição de peso: <span id="condicao-peso"></span></h2>     
+            <div class="image-container">
+                <img src="assets/IMC.jpg" alt="tabela de IMC">
             </div>
         </div>
     </main>
