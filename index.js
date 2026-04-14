@@ -1,14 +1,16 @@
 const btnEl = document.getElementById("btn");
 const mensagemCondicao = document.getElementById("condicao-peso");
-
+const campoAltura = document.getElementById("altura");
+const campoPeso = document.getElementById("peso");
+const campoResultado = document.getElementById("resultado-imc");
 
 function calcularImc() {
-    const alturaValor = document.getElementById("altura").value;
-    const pesoValor = document.getElementById("peso").value;
-    const IMC = pesoValor / ((alturaValor / 100) ** 2);
+    const altura = campoAltura.value;
+    const peso = campoPeso.value;
+    const IMC = peso / ((altura / 100) ** 2);
     const imcFormatado = IMC.toFixed(2);
-    document.getElementById("resultado-imc").value = imcFormatado;
-    if (alturaValor === "" || pesoValor === "") {
+    campoResultado.value = imcFormatado;
+    if (altura === "" || peso === "") {
         alert("Opa! Você esqueceu de preencher o peso ou a altura.");
         return;
     } 
@@ -28,11 +30,17 @@ function calcularImc() {
         mensagemCondicao.innerText = "Obesidade extrema";
         mensagemCondicao.style.color = "red";
     }
-
 }
 
 
 btnEl.addEventListener("click", () => {
     calcularImc();
+    setTimeout(() => {
+       campoAltura.value = "";
+       campoPeso.value = "";
+       campoResultado.value = ""
+       campoResultado.value = "";
+       mensagemCondicao.innerText = "";
+    }, 5000);
 });
 
